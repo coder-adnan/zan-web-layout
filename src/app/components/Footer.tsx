@@ -20,11 +20,21 @@ const Footer = () => {
           </p>
           <div className="flex justify-center mt-16">
             <ul className="flex flex-col md:flex-row md:space-x-16 space-y-4 md:space-y-0 text-center md:text-left">
-              <li className="hover:underline">Home</li>
-              <li className="hover:underline">About</li>
-              <li className="hover:underline">Services</li>
-              <li className="hover:underline">Projects</li>
-              <li className="hover:underline">Contact Us</li>
+              <li className="hover:underline">
+                <a href="#home">Home</a>
+              </li>
+              <li className="hover:underline">
+                <a href="#about">About</a>
+              </li>
+              <li className="hover:underline">
+                <a href="#services">Services</a>
+              </li>
+              <li className="hover:underline">
+                <a href="#projects">Projects</a>
+              </li>
+              <li className="hover:underline">
+                <a href="#contact">Contact Us</a>
+              </li>
             </ul>
           </div>
           <hr className="w-full border-t border-gray-300 my-20" />

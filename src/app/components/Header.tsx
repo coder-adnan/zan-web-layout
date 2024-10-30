@@ -21,7 +21,7 @@ const Header = () => {
   };
 
   return (
-    <div>
+    <div id="home">
       <nav className="py-8">
         <div className="container mx-auto flex flex-wrap justify-between items-center">
           {/* Logo */}
