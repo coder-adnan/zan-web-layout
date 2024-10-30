@@ -6,31 +6,31 @@ const Specialization = () => {
       id: "01",
       title: "EXCLUSIVE SPECIAL EVENTS",
       description:
-        "UNIQUE CULINARY CREATIONS FOR GALAS, INTERNATIONAL EVENTS, CULTURAL ACTIVATIONS, AND OTHER PRESTIGIOUS EVENTS, ADDING A TOUCH OF CLASS AND SOPHISTICATION TO ANY OCCASION.",
+        "Exclusive catering for birthdays, anniversaries, and intimate gatherings, creating a luxurious and memorable atmosphere for you and your esteemed guests.",
     },
     {
       id: "02",
       title: "CORPORATE EVENTS",
       description:
-        "TAILORED MENUS FOR HIGH-PROFILE BUSINESS MEETINGS, CONFERENCES, AND CORPORATE GATHERINGS, ENSURING A PROFESSIONAL AND REFINED DINING EXPERIENCE.",
+        "Tailored menus for high-profile business meetings, conferences, and corporate gatherings, ensuring a professional and refined dining experience.",
     },
     {
       id: "03",
       title: "LAVISH WEDDINGS",
       description:
-        "ELEGANT AND BESPOKE WEDDING CATERING TO MAKE YOUR SPECIAL DAY TRULY UNFORGETTABLE, WITH PERSONALIZED MENUS AND EXQUISITE PRESENTATION THAT REFLECT THE GRANDEUR OF SAUDI ARABIAN WEDDINGS.",
+        "Elegant and bespoke wedding catering to make your special day truly unforgettable, with personalized menus and exquisite presentation that reflect the grandeur of saudi arabian weddings.",
     },
     {
       id: "04",
       title: "CORPORATE MEAL PLANS",
       description:
-        "CUSTOMIZABLE, NUTRITIOUS, AND DELICIOUS MEAL PLANS DESIGNED TO FUEL PRODUCTIVITY AND INNOVATION.",
+        "Customizable, nutritious, and delicious meal plans designed to fuel productivity and innovation.",
     },
     {
       id: "05",
       title: "PRIVATE GATHERINGS",
       description:
-        "EXCLUSIVE CATERING FOR BIRTHDAYS, ANNIVERSARIES, AND INTIMATE GATHERINGS, CREATING A LUXURIOUS AND MEMORABLE ATMOSPHERE FOR YOU AND YOUR ESTEEMED GUESTS.",
+        "Exclusive catering for birthdays, anniversaries, and intimate gatherings, creating a luxurious and memorable atmosphere for you and your esteemed guests.",
     },
   ];
 
@@ -43,7 +43,7 @@ const Specialization = () => {
             <h1 className="text-green-900">{item.title}</h1>
           </div>
           <div>
-            <p className="text-gray-600 text-base md:text-lg">
+            <p className="text-gray-600  text-base md:text-lg">
               {item.description}
             </p>
             <hr className="mt-4 mb-4 w-full border-t border-gray-600" />
