@@ -36,7 +36,7 @@ const Carousel = () => {
     }, autoplayDelay);
 
     return () => clearInterval(autoplay);
-  }, [autoplayDelay]);
+  }, [nextSlide, autoplayDelay]);
 
   return (
     <div className="relative w-full flex flex-col items-center">

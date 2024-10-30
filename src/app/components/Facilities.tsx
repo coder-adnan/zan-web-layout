@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { Raleway } from "next/font/google";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image"; // Import StaticImageData
 import coffee from "../../../public/assets/coffeeBreaks.jpg";
 import tableService from "../../../public/assets/tableService.jpg";
 import meal from "../../../public/assets/mealPlan.jpg";
@@ -9,7 +9,13 @@ import dessert from "../../../public/assets/dessert.jpg";
 
 const raleway = Raleway({ subsets: ["latin"] });
 
-const FacilityCard = ({ title, description, image }: any) => (
+type FacilityCardProps = {
+  title: string;
+  description: string;
+  image: StaticImageData;
+};
+
+const FacilityCard = ({ title, description, image }: FacilityCardProps) => (
   <div className="relative w-full h-[400px] overflow-hidden group">
     <Image
       src={image}
@@ -18,14 +24,10 @@ const FacilityCard = ({ title, description, image }: any) => (
       sizes="(max-width: 768px) 100vw, 50vw"
       className="object-cover"
     />
-    {/* Dark overlay with hover effect */}
     <div className="absolute inset-0 bg-black opacity-60 group-hover:opacity-40 transition-opacity duration-300 ease-in-out"></div>
-
     <h1 className="absolute inset-0 flex items-center justify-center text-gray-300 text-xl font-bold z-10">
       {title}
     </h1>
-
-    {/* Description with dotted effect when not hovered */}
     <p className="absolute bottom-12 w-full text-gray-300 text-center px-4 z-10 h-16 flex items-center justify-center">
       <span className="transition-opacity duration-300 ease-in-out group-hover:opacity-100 opacity-60 line-clamp-2">
         {description}
