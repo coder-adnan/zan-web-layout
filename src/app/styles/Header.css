@@ -1,0 +1,21 @@
+.mobile-menu {
+  display: none; /* Hidden by default */
+  position: fixed; /* Sit on top of the page content */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: white; /* Background color */
+  z-index: 1000; /* Sit on top */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+}
+
+.mobile-menu.open {
+  display: flex; /* Show the menu when open */
+}
+
+.mobile-menu li {
+  margin: 15px 0; /* Add some spacing between items */
+}
