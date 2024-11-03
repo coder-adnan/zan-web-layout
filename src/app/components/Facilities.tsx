@@ -67,7 +67,7 @@ const Facilities = () => {
   return (
     <>
       <h1
-        className={`${raleway.className} pr-16 text-green-900 mb-16 font-semibold ml-24 text-4xl`}
+        className={`${raleway.className} text-green-900 mb-16 font-semibold text-4xl text-center md:text-left md:ml-24 md:pr-16`}
       >
         WHERE QUALITY
         <br />

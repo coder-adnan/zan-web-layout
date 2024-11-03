@@ -5,7 +5,9 @@ import heroImage from "../../../public/assets/HeroSectionImg.jpg";
 const HeroSection = () => {
   return (
     <>
-      <div className="flex flex-col md:flex-row mt-24 justify-center items-center">
+      <div className="flex flex-col md:flex-row mt-12 md:mt-24 justify-center items-center">
+        {" "}
+        {/* Adjusted margin */}
         <div className="w-full md:w-5/12 mb-8 md:mb-0 px-4">
           <h1
             style={{
@@ -25,14 +27,16 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className="flex justify-center mt-16">
-        <div className="w-full md:w-11/12">
+      <div className="flex justify-center mt-8 md:mt-16">
+        {" "}
+        {/* Adjusted margin for image section */}
+        <div className="w-full md:w-11/12 p-2 md:p-0">
           <Image
             src={heroImage}
             alt="hero-image"
-            className="rounded-lg" // Optional: for rounded corners
-            layout="responsive" // Ensures the image is responsive
-            objectFit="cover" // Ensures the image covers the area without distortion
+            className="md:rounded-lg" // Border radius only on medium screens and larger
+            layout="responsive"
+            objectFit="cover"
           />
         </div>
       </div>

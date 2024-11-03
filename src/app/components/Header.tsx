@@ -102,15 +102,14 @@ const Header = () => {
                 Projects
               </Link>
             </li>
+            {/* Contact Button */}
+            <a
+              href="#contact"
+              className="bg-green-900 text-white px-5 py-1 rounded-full hover:bg-green-700 transition-all"
+            >
+              Contact Us
+            </a>
           </ul>
-
-          {/* Contact Button */}
-          <a
-            href="#contact"
-            className="bg-green-900 text-white px-5 py-1 rounded-full hover:bg-green-700 transition-all"
-          >
-            Contact Us
-          </a>
         </div>
 
         {/* Fullscreen Mobile Navigation Menu */}
@@ -132,7 +131,7 @@ const Header = () => {
                       ? "underline underline-offset-8 decoration-2 decoration-green-900"
                       : ""
                   }`}
-                  onClick={handleLinkClick} // Close menu on click
+                  onClick={handleLinkClick}
                 >
                   Home
                 </Link>
@@ -145,7 +144,7 @@ const Header = () => {
                       ? "underline underline-offset-8 decoration-2 decoration-green-900"
                       : ""
                   }`}
-                  onClick={handleLinkClick} // Close menu on click
+                  onClick={handleLinkClick}
                 >
                   About
                 </Link>
@@ -158,7 +157,7 @@ const Header = () => {
                       ? "underline underline-offset-8 decoration-2 decoration-green-900"
                       : ""
                   }`}
-                  onClick={handleLinkClick} // Close menu on click
+                  onClick={handleLinkClick}
                 >
                   Services
                 </Link>
@@ -171,10 +170,20 @@ const Header = () => {
                       ? "underline underline-offset-8 decoration-2 decoration-green-900"
                       : ""
                   }`}
-                  onClick={handleLinkClick} // Close menu on click
+                  onClick={handleLinkClick}
                 >
                   Projects
                 </Link>
+              </li>
+              {/* Contact Us Button in Mobile Menu */}
+              <li>
+                <a
+                  href="#contact"
+                  className="bg-green-900 text-white px-5 py-1 rounded-full hover:bg-green-700 transition-all"
+                  onClick={handleLinkClick}
+                >
+                  Contact Us
+                </a>
               </li>
             </ul>
           </div>
