@@ -23,7 +23,7 @@ const Header = () => {
   return (
     <div id="home">
       <nav className="py-8">
-        <div className="container mx-auto flex flex-wrap justify-between items-center">
+        <div className="container mx-auto flex flex-wrap justify-between items-center px-4 md:px-0">
           {/* Logo */}
           <Link href="/" className="text-2xl font-bold text-gray-800">
             <Image src={logo} alt="Logo" width={80} height={80} />
