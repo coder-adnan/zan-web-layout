@@ -34,13 +34,16 @@ const About = () => {
           </p>
         </div>
         <div className="w-full lg:w-1/3 flex justify-center px-4">
-          <Image
-            className="pt-8"
-            src={aboutImage}
-            alt="about-image"
-            width={400}
-            height={300}
-          />
+          <div className="w-full md:w-11/12 py-4 md:px-0">
+            {/* Match the wrapper styling */}
+            <Image
+              src={aboutImage}
+              alt="about-image"
+              className="md:rounded-lg" // Add border radius for medium screens and larger
+              layout="responsive" // Make the image responsive
+              objectFit="cover" // Ensure the image covers its container
+            />
+          </div>
         </div>
       </div>
 
