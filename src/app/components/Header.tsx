@@ -1,16 +1,29 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import logo from "../../../public/assets/HeroLogo.png";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross2 } from "react-icons/rx";
+import { useTranslations } from "next-intl";
 import "../styles/Header.css";
 
 const Header = () => {
+  const t = useTranslations("Header");
   const pathname = usePathname();
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [selectedLanguage, setSelectedLanguage] = useState("en"); // Default language
+  const [isDropdownOpen, setDropdownOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement | null>(null);
+
+  // Load language from session storage on mount
+  useEffect(() => {
+    const lang = sessionStorage.getItem("selectedLanguage");
+    if (lang) {
+      setSelectedLanguage(lang);
+    }
+  }, []);
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen((prev) => !prev);
@@ -19,6 +32,30 @@ const Header = () => {
   const handleLinkClick = () => {
     setMobileMenuOpen(false); // Close the menu when a link is clicked
   };
+
+  const changeLanguage = (lang: string) => {
+    setSelectedLanguage(lang);
+    setDropdownOpen(false); // Close dropdown when changing language
+    sessionStorage.setItem("selectedLanguage", lang); // Store the language in session storage
+    window.location.href = `/${lang}`; // Adjust this path as per your routing setup
+  };
+
+  // Close dropdown if clicked outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <div id="home">
@@ -58,9 +95,9 @@ const Header = () => {
                     ? "underline underline-offset-8 decoration-2 decoration-green-900"
                     : ""
                 }`}
-                onClick={handleLinkClick} // Close menu on click
+                onClick={handleLinkClick}
               >
-                Home
+                {t("home")}
               </Link>
             </li>
             <li>
@@ -71,9 +108,9 @@ const Header = () => {
                     ? "underline underline-offset-8 decoration-2 decoration-green-900"
                     : ""
                 }`}
-                onClick={handleLinkClick} // Close menu on click
+                onClick={handleLinkClick}
               >
-                About
+                {t("about")}
               </Link>
             </li>
             <li>
@@ -84,22 +121,22 @@ const Header = () => {
                     ? "underline underline-offset-8 decoration-2 decoration-green-900"
                     : ""
                 }`}
-                onClick={handleLinkClick} // Close menu on click
+                onClick={handleLinkClick}
               >
-                Services
+                {t("services")}
               </Link>
             </li>
             <li>
               <Link
-                href="#events"
+                href="#projects"
                 className={`text-gray-600 hover:text-green-900 ${
                   pathname === "/projects"
                     ? "underline underline-offset-8 decoration-2 decoration-green-900"
                     : ""
                 }`}
-                onClick={handleLinkClick} // Close menu on click
+                onClick={handleLinkClick}
               >
-                Projects
+                {t("projects")}
               </Link>
             </li>
             {/* Contact Button */}
@@ -107,8 +144,33 @@ const Header = () => {
               href="#contact"
               className="bg-green-900 text-white px-5 py-1 rounded-full hover:bg-green-700 transition-all"
             >
-              Contact Us
+              {t("contact")}
             </a>
+            {/* Language Dropdown */}
+            <div className="relative" ref={dropdownRef}>
+              <button
+                className="bg-gray-200 text-gray-800 py-2 px-4 rounded"
+                onClick={() => setDropdownOpen((prev) => !prev)}
+              >
+                {selectedLanguage.toUpperCase()} ▼
+              </button>
+              {isDropdownOpen && (
+                <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg z-10">
+                  <button
+                    onClick={() => changeLanguage("en")}
+                    className="block px-4 py-2 text-gray-800 hover:bg-gray-100 w-full text-left"
+                  >
+                    English
+                  </button>
+                  <button
+                    onClick={() => changeLanguage("ar")}
+                    className="block px-4 py-2 text-gray-800 hover:bg-gray-100 w-full text-left"
+                  >
+                    العربية
+                  </button>
+                </div>
+              )}
+            </div>
           </ul>
         </div>
 
@@ -133,7 +195,7 @@ const Header = () => {
                   }`}
                   onClick={handleLinkClick}
                 >
-                  Home
+                  {t("home")}
                 </Link>
               </li>
               <li>
@@ -146,7 +208,7 @@ const Header = () => {
                   }`}
                   onClick={handleLinkClick}
                 >
-                  About
+                  {t("about")}
                 </Link>
               </li>
               <li>
@@ -159,12 +221,12 @@ const Header = () => {
                   }`}
                   onClick={handleLinkClick}
                 >
-                  Services
+                  {t("services")}
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#events"
+                  href="#projects"
                   className={`block text-gray-600 hover:text-green-900 ${
                     pathname === "/projects"
                       ? "underline underline-offset-8 decoration-2 decoration-green-900"
@@ -172,7 +234,7 @@ const Header = () => {
                   }`}
                   onClick={handleLinkClick}
                 >
-                  Projects
+                  {t("projects")}
                 </Link>
               </li>
               {/* Contact Us Button in Mobile Menu */}
@@ -182,7 +244,7 @@ const Header = () => {
                   className="bg-green-900 text-white px-5 py-1 rounded-full hover:bg-green-700 transition-all"
                   onClick={handleLinkClick}
                 >
-                  Contact Us
+                  {t("contact")}
                 </a>
               </li>
             </ul>

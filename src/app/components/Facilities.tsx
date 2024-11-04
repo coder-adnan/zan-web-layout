@@ -1,11 +1,12 @@
 "use client";
 import React from "react";
 import { Raleway } from "next/font/google";
-import Image, { StaticImageData } from "next/image"; // Import StaticImageData
+import Image, { StaticImageData } from "next/image";
 import coffee from "../../../public/assets/coffeeBreaks.jpg";
 import tableService from "../../../public/assets/tableService.jpg";
 import meal from "../../../public/assets/mealPlan.jpg";
 import dessert from "../../../public/assets/dessert.jpg";
+import { useTranslations } from "next-intl"; // Import the translation hook
 
 const raleway = Raleway({ subsets: ["latin"] });
 
@@ -37,29 +38,27 @@ const FacilityCard = ({ title, description, image }: FacilityCardProps) => (
 );
 
 const Facilities = () => {
+  const t = useTranslations("Facilities"); // Get translations for the "Facilities" namespace
+
   const facilities = [
     {
-      title: "COFFEE BREAKS",
-      description:
-        "Coffee break services for events, meetings, and conferences. Menus can be customized. For example, coffee machines, espresso machine, teas, baked goods.",
+      title: t("coffeeBreaks.title"), // Use translation for title
+      description: t("coffeeBreaks.description"), // Use translation for description
       image: coffee,
     },
     {
-      title: "TABLE SERVICES",
-      description:
-        "For your lunch and dinner catering needs, we offer a range of dining styles including silver service, set menus, buffets, and interactive table buffets. Our customizable menus and service options are designed to enhance the dining experience for your guests.",
+      title: t("tableServices.title"), // Use translation for title
+      description: t("tableServices.description"), // Use translation for description
       image: tableService,
     },
     {
-      title: "CORPORATE MEAL PLANS",
-      description:
-        "We offer B2B daily meal services that are designed to provide nourishing and balanced meals for your workforce, delivering high-quality and delicious meals.",
+      title: t("corporateMealPlans.title"), // Use translation for title
+      description: t("corporateMealPlans.description"), // Use translation for description
       image: meal,
     },
     {
-      title: "CANAPES AND FINGER BITES",
-      description:
-        "For upscale events, we provide a refined catering option featuring a selection of elegant canapés and mini sandwiches. These exquisite bites can be passed around or displayed on a buffet, tailored to enhance the sophistication of your event.",
+      title: t("canapesAndFingerBites.title"), // Use translation for title
+      description: t("canapesAndFingerBites.description"), // Use translation for description
       image: dessert,
     },
   ];
@@ -69,9 +68,7 @@ const Facilities = () => {
       <h1
         className={`${raleway.className} text-green-900 mb-16 font-semibold text-4xl text-center md:text-left md:ml-24 md:pr-16`}
       >
-        WHERE QUALITY
-        <br />
-        MEETS HOSPITALITY
+        {t("header")} {/* Use translation for header */}
       </h1>
       <div className="grid mb-36 grid-cols-1 md:grid-cols-2 gap-6 mt-8 w-11/12 mx-auto">
         {facilities.map((facility, index) => (

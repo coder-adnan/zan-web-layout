@@ -1,8 +1,7 @@
 import type { NextConfig } from "next";
-
+const withNextIntl = require("next-intl/plugin")();
 const nextConfig: NextConfig = {
   webpack: (config) => {
-    // Add a rule for handling SVG files
     config.module.rules.push({
       test: /\.svg$/,
       use: ["@svgr/webpack"],
@@ -11,4 +10,4 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default nextConfig;
+export default withNextIntl(nextConfig);

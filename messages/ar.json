@@ -1,0 +1,110 @@
+{
+  "Header": {
+    "home": "الرئيسية",
+    "about": "عنّا",
+    "services": "الخدمات",
+    "projects": "المشاريع",
+    "contact": "تواصل معنا"
+  },
+  "Hero": {
+    "title": "حيث تلتقي الجودة بالضيافة",
+    "description": "زان للضيافة حيث يتلاقى التميز الطهوي مع التجارب المصممة خصيصاً. نحن متخصصون في تقديم المأكولات عالية الجودة واللذيذة التي تهدف إلى تعزيز أي مناسبة."
+  },
+  "About": {
+    "title": "معلومات عنا",
+    "introductionTitle": "مقدمة",
+    "introductionText": "مع خبرة جماعية تتجاوز 50 عاماً في صناعة الضيافة، يتمتع فريقنا بخلفيات واسعة في إدارة الفعاليات، وخدمات تقديم الطعام في الفنادق، وإدارة عمليات الأغذية والمشروبات، فضلاً عن المقاهي والمطاعم الفاخرة. مدفوعون بالشغف والإبداع، نسعى لصنع تجارب طعام استثنائية تترك انطباعاً دائماً وتلبي احتياجات وتفضيلات عملائنا المتنوعة.",
+    "commitmentTitle": "التزام ثابت نحو الكمال",
+    "projectsCount": "30+",
+    "projectsLabel": "مشاريع",
+    "experienceCount": "5",
+    "experienceLabel": "سنوات من الخبرة",
+    "clientsCount": "20",
+    "clientsLabel": "عملاء",
+    "learnMore": "أعرف المزيد"
+  },
+  "Events": {
+    "title": "الفعاليات",
+    "latestEvents": "أحدث الفعاليات"
+  },
+  "Carousel": {
+    "slide1": "وزارة الاتصالات وتقنية المعلومات",
+    "slide2": "فور سيزونز",
+    "slide3": "وزارة الاتصالات وتقنية المعلومات",
+    "slide4": "فور سيزونز"
+  },
+  "Service": {
+    "title": "الخدمات",
+    "specializationTitle": "مجالات التخصص"
+  },
+  "Specialization": {
+    "exclusiveSpecialEvents": {
+      "title": "أحداث خاصة حصرية",
+      "description": "تقديم الطعام الحصري لأعياد الميلاد، وذكريات الزفاف، والتجمعات الحميمة، لإنشاء جو فاخر لا يُنسى لك ولضيوفك الكرام."
+    },
+    "corporateEvents": {
+      "title": "الأحداث التجارية",
+      "description": "قوائم طعام مصممة خصيصاً للاجتماعات التجارية الرفيعة المستوى، والمؤتمرات، والتجمعات التجارية، لضمان تجربة تناول طعام احترافية ومصقولة."
+    },
+    "lavishWeddings": {
+      "title": "حفلات الزفاف الفاخرة",
+      "description": "تقديم طعام أنيق ومفصل لجعل يومك الخاص لا يُنسى حقاً، مع قوائم طعام شخصية وعرض رائع يعكس روعة حفلات الزفاف السعودية."
+    },
+    "corporateMealPlans": {
+      "title": "خطط الوجبات للشركات",
+      "description": "خطط وجبات قابلة للتخصيص، مغذية، ولذيذة، مصممة لتحفيز الإنتاجية والابتكار."
+    },
+    "privateGatherings": {
+      "title": "التجمعات الخاصة",
+      "description": "تقديم الطعام الحصري لأعياد الميلاد، وذكريات الزفاف، والتجمعات الحميمة، لإنشاء جو فاخر لا يُنسى لك ولضيوفك الكرام."
+    }
+  },
+  "Facilities": {
+    "header": "حيث الجودة",
+    "coffeeBreaks": {
+      "title": "استراحات القهوة",
+      "description": "خدمات استراحة القهوة للفعاليات، الاجتماعات، والمؤتمرات. يمكن تخصيص القوائم، مثل آلات القهوة، آلة الإسبريسو، الشاي، والمخبوزات."
+    },
+    "tableServices": {
+      "title": "خدمات الطاولات",
+      "description": "لاحتياجات تقديم الطعام في الغداء والعشاء، نقدم مجموعة من أنماط تناول الطعام بما في ذلك الخدمة الفضية، القوائم المحددة، البوفيهات، والبوفيهات التفاعلية. تم تصميم قوائم الطعام وخيارات الخدمة القابلة للتخصيص لتعزيز تجربة تناول الطعام لضيوفك."
+    },
+    "corporateMealPlans": {
+      "title": "خطط الوجبات للشركات",
+      "description": "نقدم خدمات الوجبات اليومية للأعمال المصممة لتوفير وجبات مغذية ومتوازنة لقوة العمل لديك، مع تقديم وجبات عالية الجودة ولذيذة."
+    },
+    "canapesAndFingerBites": {
+      "title": "كانابيه ووجبات خفيفة",
+      "description": "للفعاليات الراقية، نقدم خيار تقديم طعام مصفّى يتميز بتشكيلة من الكانابيه الأنيقة والسندويشات الصغيرة. يمكن تقديم هذه الوجبات الراقية بشكل عرضي أو عرضها على بوفيه، مصممة لتعزيز أناقة فعاليتك."
+    }
+  },
+  "Clients": {
+    "header": "العملاء",
+    "ministryOfEnergy": "وزارة الطاقة",
+    "leap": "لياب",
+    "ministryOfICT": "وزارة الاتصالات وتقنية المعلومات",
+    "fintechSaudi": "فينتك السعودية",
+    "tahaluf": "تحالف",
+    "fourSeasons": "فور سيزونز",
+    "twentyFourF": "24 ف"
+  },
+  "Footer": {
+    "footerDescription": "E CONSEQUAT, VEL ILLUM DOLORE EU FEUGIAT NULLA FACILISIS AT VERO EROS ET ACCUMSAN ET IUSTO ODIO DIGNISSIM QUI BLANDIT PRAESENT LUPTATUM ZZRIL DELENIT AUGUE DUIS DOLORE TE FEUGAIT. NULLA FACILISI",
+    "home": "الرئيسية",
+    "about": "معلومات عنا",
+    "services": "الخدمات",
+    "projects": "المشاريع",
+    "contactus": "اتصل بنا",
+    "address": "العنوان",
+    "addressDescription": "Lorem ipsum dolor sit amet, consectetur.",
+    "contact": "الاتصال",
+    "contactDescription": "Lorem ipsum dolor sit amet, consectetur.",
+    "contactDetails": "Lorem ipsum dolor sit amet, consectetur.",
+    "bookNow": "احجز الآن",
+    "bookDescription": "Lorem ipsum dolor sit amet, consectetur.",
+    "contactUs": "اتصل بنا",
+    "rightsReserved": "© جميع الحقوق محفوظة",
+    "privacyPolicy": "سياسة الخصوصية",
+    "termsAndServices": "الشروط والأحكام"
+  }
+}

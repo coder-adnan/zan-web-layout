@@ -1,0 +1,110 @@
+{
+  "Header": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "projects": "Projects",
+    "contact": "Contact Us"
+  },
+  "Hero": {
+    "title": "WHERE QUALITY MEETS HOSPITALITY",
+    "description": "Zan Hospitality is where culinary excellence meets bespoke experiences. We specialize in providing high-quality, delicious cuisine tailored to elevate any occasion."
+  },
+  "About": {
+    "title": "About Us",
+    "introductionTitle": "Introduction",
+    "introductionText": "With a collective experience exceeding 50 years in the hospitality industry, our team boasts extensive backgrounds in event management, hotel catering services, food and beverage operations management, as well as cafés and fine dining restaurants. Driven by passion and creativity, we strive to craft exceptional dining experiences that leave a lasting impression and meet the diverse needs and preferences of our clients.",
+    "commitmentTitle": "Unwavering Commitment to Perfection",
+    "projectsCount": "30+",
+    "projectsLabel": "Projects",
+    "experienceCount": "5",
+    "experienceLabel": "Years in Experience",
+    "clientsCount": "20",
+    "clientsLabel": "Clients",
+    "learnMore": "Learn More"
+  },
+  "Events": {
+    "title": "Events",
+    "latestEvents": "Latest Events"
+  },
+  "Carousel": {
+    "slide1": "Ministry of Communications and Information Technology",
+    "slide2": "Four Seasons",
+    "slide3": "Ministry of Communications and Information Technology",
+    "slide4": "Four Seasons"
+  },
+  "Service": {
+    "title": "Services",
+    "specializationTitle": "AREAS OF SPECIALIZATION"
+  },
+  "Specialization": {
+    "exclusiveSpecialEvents": {
+      "title": "EXCLUSIVE SPECIAL EVENTS",
+      "description": "Exclusive catering for birthdays, anniversaries, and intimate gatherings, creating a luxurious and memorable atmosphere for you and your esteemed guests."
+    },
+    "corporateEvents": {
+      "title": "CORPORATE EVENTS",
+      "description": "Tailored menus for high-profile business meetings, conferences, and corporate gatherings, ensuring a professional and refined dining experience."
+    },
+    "lavishWeddings": {
+      "title": "LAVISH WEDDINGS",
+      "description": "Elegant and bespoke wedding catering to make your special day truly unforgettable, with personalized menus and exquisite presentation that reflect the grandeur of Saudi Arabian weddings."
+    },
+    "corporateMealPlans": {
+      "title": "CORPORATE MEAL PLANS",
+      "description": "Customizable, nutritious, and delicious meal plans designed to fuel productivity and innovation."
+    },
+    "privateGatherings": {
+      "title": "PRIVATE GATHERINGS",
+      "description": "Exclusive catering for birthdays, anniversaries, and intimate gatherings, creating a luxurious and memorable atmosphere for you and your esteemed guests."
+    }
+  },
+  "Facilities": {
+    "header": "WHERE QUALITY",
+    "coffeeBreaks": {
+      "title": "COFFEE BREAKS",
+      "description": "Coffee break services for events, meetings, and conferences. Menus can be customized, such as coffee machines, espresso machine, teas, and baked goods."
+    },
+    "tableServices": {
+      "title": "TABLE SERVICES",
+      "description": "For your lunch and dinner catering needs, we offer a range of dining styles including silver service, set menus, buffets, and interactive table buffets. Our customizable menus and service options are designed to enhance the dining experience for your guests."
+    },
+    "corporateMealPlans": {
+      "title": "CORPORATE MEAL PLANS",
+      "description": "We offer B2B daily meal services that are designed to provide nourishing and balanced meals for your workforce, delivering high-quality and delicious meals."
+    },
+    "canapesAndFingerBites": {
+      "title": "CANAPES AND FINGER BITES",
+      "description": "For upscale events, we provide a refined catering option featuring a selection of elegant canapés and mini sandwiches. These exquisite bites can be passed around or displayed on a buffet, tailored to enhance the sophistication of your event."
+    }
+  },
+  "Clients": {
+    "header": "CLIENTS",
+    "ministryOfEnergy": "Ministry of Energy",
+    "leap": "LEAP",
+    "ministryOfICT": "Ministry of ICT",
+    "fintechSaudi": "Fintech Saudi",
+    "tahaluf": "Tahaluf",
+    "fourSeasons": "Four Seasons",
+    "twentyFourF": "24 F"
+  },
+  "Footer": {
+    "footerDescription": "E CONSEQUAT, VEL ILLUM DOLORE EU FEUGIAT NULLA FACILISIS AT VERO EROS ET ACCUMSAN ET IUSTO ODIO DIGNISSIM QUI BLANDIT PRAESENT LUPTATUM ZZRIL DELENIT AUGUE DUIS DOLORE TE FEUGAIT. NULLA FACILISI",
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "projects": "Projects",
+    "contactus": "Contact Us",
+    "address": "Address",
+    "addressDescription": "Lorem ipsum dolor sit amet, consectetur.",
+    "contact": "Contact",
+    "contactDescription": "Lorem ipsum dolor sit amet, consectetur.",
+    "contactDetails": "Lorem ipsum dolor sit amet, consectetur.",
+    "bookNow": "Book Now",
+    "bookDescription": "Lorem ipsum dolor sit amet, consectetur.",
+    "contactUs": "Contact us",
+    "rightsReserved": "© All Rights Reserved",
+    "privacyPolicy": "Privacy Policy",
+    "termsAndServices": "Terms and Services"
+  }
+}

@@ -1,36 +1,34 @@
 import React from "react";
+import { useTranslations } from "next-intl"; // Import the translation hook
 
 const Specialization = () => {
+  const t = useTranslations("Specialization"); // Get translations for the "Specialization" namespace
+
   const data = [
     {
       id: "01",
-      title: "EXCLUSIVE SPECIAL EVENTS",
-      description:
-        "Exclusive catering for birthdays, anniversaries, and intimate gatherings, creating a luxurious and memorable atmosphere for you and your esteemed guests.",
+      title: t("exclusiveSpecialEvents.title"), // Use translation for title
+      description: t("exclusiveSpecialEvents.description"), // Use translation for description
     },
     {
       id: "02",
-      title: "CORPORATE EVENTS",
-      description:
-        "Tailored menus for high-profile business meetings, conferences, and corporate gatherings, ensuring a professional and refined dining experience.",
+      title: t("corporateEvents.title"), // Use translation for title
+      description: t("corporateEvents.description"), // Use translation for description
     },
     {
       id: "03",
-      title: "LAVISH WEDDINGS",
-      description:
-        "Elegant and bespoke wedding catering to make your special day truly unforgettable, with personalized menus and exquisite presentation that reflect the grandeur of saudi arabian weddings.",
+      title: t("lavishWeddings.title"), // Use translation for title
+      description: t("lavishWeddings.description"), // Use translation for description
     },
     {
       id: "04",
-      title: "CORPORATE MEAL PLANS",
-      description:
-        "Customizable, nutritious, and delicious meal plans designed to fuel productivity and innovation.",
+      title: t("corporateMealPlans.title"), // Use translation for title
+      description: t("corporateMealPlans.description"), // Use translation for description
     },
     {
       id: "05",
-      title: "PRIVATE GATHERINGS",
-      description:
-        "Exclusive catering for birthdays, anniversaries, and intimate gatherings, creating a luxurious and memorable atmosphere for you and your esteemed guests.",
+      title: t("privateGatherings.title"), // Use translation for title
+      description: t("privateGatherings.description"), // Use translation for description
     },
   ];
 
@@ -43,7 +41,7 @@ const Specialization = () => {
             <h1 className="text-green-900">{item.title}</h1>
           </div>
           <div>
-            <p className="text-gray-600  text-base md:text-lg">
+            <p className="text-gray-600 text-base md:text-lg">
               {item.description}
             </p>
             <hr className="mt-4 mb-4 w-full border-t border-gray-600" />

@@ -2,24 +2,27 @@
 import React, { useState, useEffect, useCallback } from "react"; // Import useCallback
 import Image from "next/image";
 import carImage1 from "../../../../public/assets/carImg1.png";
+import { useTranslations } from "next-intl"; // Import the translation hook
 
 const Carousel = () => {
+  const t = useTranslations("Carousel"); // Get the translation for the "Carousel" namespace
+
   const slides = [
     {
       image: carImage1,
-      caption: "Ministry of Communications and Information Technology",
+      caption: t("slide1"), // Use translation for caption
     },
     {
       image: carImage1,
-      caption: "Four Seasons",
+      caption: t("slide2"), // Use translation for caption
     },
     {
       image: carImage1,
-      caption: "Ministry of Communications and Information Technology",
+      caption: t("slide3"), // Use translation for caption
     },
     {
       image: carImage1,
-      caption: "Four Seasons",
+      caption: t("slide4"), // Use translation for caption
     },
   ];
 
@@ -28,9 +31,8 @@ const Carousel = () => {
   const autoplayDelay = 3000;
 
   const nextSlide = useCallback(() => {
-    // Wrap in useCallback
     setCurrentSlide((prev) => (prev + 1) % slides.length);
-  }, [slides.length]); // Include dependencies
+  }, [slides.length]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -45,9 +47,8 @@ const Carousel = () => {
       clearInterval(autoplay);
       window.removeEventListener("resize", handleResize);
     };
-  }, [nextSlide, autoplayDelay]); // Include nextSlide in dependency array
+  }, [nextSlide, autoplayDelay]);
 
-  // Determine number of dots based on window size
   const numberOfDots = isMobile ? slides.length : Math.ceil(slides.length / 2);
 
   return (
@@ -58,7 +59,7 @@ const Carousel = () => {
           style={{
             transform: `translateX(-${
               (currentSlide / (isMobile ? 1 : 2)) * 100
-            }%)`, // Adjust for the number of visible slides
+            }%)`,
           }}
         >
           {slides.map((slide, index) => (
@@ -71,7 +72,7 @@ const Carousel = () => {
                   loading="lazy"
                   width={250}
                   height={300}
-                  style={{ objectFit: "contain" }} // Ensure the image maintains its aspect ratio
+                  style={{ objectFit: "contain" }}
                 />
                 <p className="text-center my-2 text-gray-600">
                   {slide.caption}
@@ -90,8 +91,8 @@ const Carousel = () => {
             onClick={() => setCurrentSlide(isMobile ? index : index * 2)}
             className={`w-4 h-4 mx-1 rounded-full border ${
               currentSlide === (isMobile ? index : index * 2)
-                ? "bg-green-900 border-green-900" // Active state
-                : "border-green-900 bg-transparent" // Inactive state
+                ? "bg-green-900 border-green-900"
+                : "border-green-900 bg-transparent"
             }`}
           />
         ))}

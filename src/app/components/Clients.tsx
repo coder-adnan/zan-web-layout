@@ -8,16 +8,18 @@ import fintechSaudi from "../../../public/assets/fintechSaudi.svg";
 import Tahaluf from "../../../public/assets/Tahaluf.svg";
 import fourSeasons from "../../../public/assets/fourSeasons.svg";
 import twentyFourF from "../../../public/assets/24f.svg";
+import { useTranslations } from "next-intl";
 
 function Clients() {
+  const t = useTranslations("Clients");
   const images = [
-    { src: MinistryOfEnergy, alt: "Ministry of Energy" },
-    { src: Leap, alt: "LEAP" },
-    { src: MinistryOfI, alt: "Ministry of ICT" },
-    { src: fintechSaudi, alt: "Fintech Saudi" },
-    { src: Tahaluf, alt: "Tahaluf" },
-    { src: fourSeasons, alt: "Four Seasons" },
-    { src: twentyFourF, alt: "24 F" },
+    { src: MinistryOfEnergy, alt: t("ministryOfEnergy") }, // Use translation for alt text
+    { src: Leap, alt: t("leap") }, // Use translation for alt text
+    { src: MinistryOfI, alt: t("ministryOfICT") }, // Use translation for alt text
+    { src: fintechSaudi, alt: t("fintechSaudi") }, // Use translation for alt text
+    { src: Tahaluf, alt: t("tahaluf") }, // Use translation for alt text
+    { src: fourSeasons, alt: t("fourSeasons") }, // Use translation for alt text
+    { src: twentyFourF, alt: t("twentyFourF") }, // Use translation for alt text
   ];
 
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -54,7 +56,7 @@ function Clients() {
 
   return (
     <div style={{ backgroundColor: "#e4e3d6" }} className="w-full py-16">
-      <h1 className="text-xl text-gray-600 text-center mb-12">Clients</h1>
+      <h1 className="text-xl text-gray-600 text-center mb-12">{t("header")}</h1>
       <div className="overflow-hidden w-11/12 mx-auto relative">
         <div
           className="flex transition-transform duration-500 justify-center"

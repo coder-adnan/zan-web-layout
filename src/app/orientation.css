@@ -1,0 +1,9 @@
+.rtl {
+  direction: rtl;
+  text-align: right; /* Ensure text aligns to the right */
+}
+
+.ltr {
+  direction: ltr;
+  text-align: left; /* Ensure text aligns to the left */
+}
