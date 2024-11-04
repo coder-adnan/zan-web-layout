@@ -83,7 +83,7 @@ const Header = () => {
 
           {/* Navigation Menu */}
           <ul
-            className={`flex flex-col md:flex-row space-x-0 md:space-x-20 ${
+            className={`flex flex-col items-center  md:flex-row lg:space-x-20 md:space-x-12 md:flex-nowrap ${
               isMobileMenuOpen ? "block" : "hidden md:flex"
             }`}
           >
@@ -142,14 +142,14 @@ const Header = () => {
             {/* Contact Button */}
             <a
               href="#contact"
-              className="bg-green-900 text-white px-5 py-1 rounded-full hover:bg-green-700 transition-all"
+              className="bg-green-900 text-white px-5 py-1 flex justify-center items-center rounded-full hover:bg-green-700 transition-all"
             >
               {t("contact")}
             </a>
             {/* Language Dropdown */}
             <div className="relative" ref={dropdownRef}>
               <button
-                className="bg-gray-200 text-gray-800 py-2 px-4 rounded"
+                className="bg-gray-200 text-gray-800 py-2 px-4 rounded w-fit"
                 onClick={() => setDropdownOpen((prev) => !prev)}
               >
                 {selectedLanguage.toUpperCase()} ▼
