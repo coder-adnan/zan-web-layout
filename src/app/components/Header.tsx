@@ -8,7 +8,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross2 } from "react-icons/rx";
 import { useTranslations } from "next-intl";
 import "../styles/Header.css";
-
+import { IoLanguageSharp } from "react-icons/io5";
 const Header = () => {
   const t = useTranslations("Header");
   const pathname = usePathname();
@@ -149,10 +149,10 @@ const Header = () => {
             {/* Language Dropdown */}
             <div className="relative" ref={dropdownRef}>
               <button
-                className="bg-gray-200 text-gray-800 py-2 px-4 rounded w-fit"
+                className="bg-gray-200 text-gray-800 py-2 px-4 rounded w-fit flex gap-2 items-center"
                 onClick={() => setDropdownOpen((prev) => !prev)}
               >
-                {selectedLanguage.toUpperCase()} ▼
+                <IoLanguageSharp /> ▼
               </button>
               {isDropdownOpen && (
                 <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg z-10">
