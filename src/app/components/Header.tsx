@@ -9,6 +9,7 @@ import { RxCross2 } from "react-icons/rx";
 import { useTranslations } from "next-intl";
 import "../styles/Header.css";
 import { IoLanguageSharp } from "react-icons/io5";
+
 const Header = () => {
   const t = useTranslations("Header");
   const pathname = usePathname();
@@ -32,12 +33,12 @@ const Header = () => {
   const handleLinkClick = () => {
     setMobileMenuOpen(false); // Close the menu when a link is clicked
   };
-
   const changeLanguage = (lang: string) => {
     setSelectedLanguage(lang);
-    setDropdownOpen(false); // Close dropdown when changing language
-    sessionStorage.setItem("selectedLanguage", lang); // Store the language in session storage
-    window.location.href = `/${lang}`; // Adjust this path as per your routing setup
+    setDropdownOpen(false);
+    sessionStorage.setItem("selectedLanguage", lang);
+    document.documentElement.setAttribute("dir", lang === "ar" ? "rtl" : "ltr"); // Set dir attribute
+    window.location.href = `/${lang}`;
   };
 
   // Close dropdown if clicked outside
@@ -149,7 +150,7 @@ const Header = () => {
             {/* Language Dropdown */}
             <div className="relative" ref={dropdownRef}>
               <button
-                className="bg-gray-200 text-gray-800 py-2 px-4 rounded w-fit flex gap-2 items-center"
+                className="bg-gray-200 hover:bg-transparent transition-all text-gray-800 py-2 px-4 rounded w-fit flex gap-2 items-center"
                 onClick={() => setDropdownOpen((prev) => !prev)}
               >
                 <IoLanguageSharp /> ▼
@@ -247,6 +248,31 @@ const Header = () => {
                   {t("contact")}
                 </a>
               </li>
+              {/* Language Dropdown in Mobile Menu */}
+              <div className="relative" ref={dropdownRef}>
+                <button
+                  className="bg-gray-200 text-gray-800 py-1 rounded-full w-32 mt-4 justify-center flex gap-2 items-center"
+                  onClick={() => setDropdownOpen((prev) => !prev)}
+                >
+                  {selectedLanguage} <IoLanguageSharp /> ▼
+                </button>
+                {isDropdownOpen && (
+                  <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg z-10">
+                    <button
+                      onClick={() => changeLanguage("en")}
+                      className="block px-4 py-2 text-gray-800 hover:bg-gray-100 w-full text-left"
+                    >
+                      English
+                    </button>
+                    <button
+                      onClick={() => changeLanguage("ar")}
+                      className="block px-4 py-2 text-gray-800 hover:bg-gray-100 w-full text-left"
+                    >
+                      العربية
+                    </button>
+                  </div>
+                )}
+              </div>
             </ul>
           </div>
         )}

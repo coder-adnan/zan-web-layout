@@ -19,3 +19,13 @@
 .mobile-menu li {
   margin: 15px 0; /* Add some spacing between items */
 }
+
+/* Header.css */
+[dir="rtl"] .flex-row {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .lg\\:space-x-20,
+[dir="rtl"] .md\\:space-x-12 {
+  gap: 20px; /* Adjust spacing for RTL */
+}
